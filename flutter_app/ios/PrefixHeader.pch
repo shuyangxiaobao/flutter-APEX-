@@ -1,0 +1,72 @@
+//
+//  PrefixHeader.pch
+//  Runner
+//
+//  Created by xiaobao on 2019/9/9.
+//  Copyright © 2019 The Chromium Authors. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#define kBASESCREENWIDTH  375.0f
+#define kBASESCREENHEIGHT  667.0f
+#define kScreen_Width ([UIScreen mainScreen].bounds.size.width)
+#define kScreen_Height ([UIScreen mainScreen].bounds.size.height)
+#define SCREEN_WIDTH ([UIScreen mainScreen].bounds.size.width)
+#define SCREEN_HEIGHT ([UIScreen mainScreen].bounds.size.height)
+#define kAutoSizeScaleX_ SCREEN_WIDTH/kBASESCREENWIDTH      //竖屏_X
+#define kAutoSizeScaleY_ SCREEN_HEIGHT/kBASESCREENHEIGHT      //竖屏_Y
+#define getAutoSizeWidth(key) ((NSInteger)(kAutoSizeScaleX_ * key))
+#define getAutoSizeHeight(key) ((NSInteger)(kAutoSizeScaleY_ * key))
+#define iPhoneX  [UIApplication sharedApplication].statusBarFrame.size.height >= 44
+#define NavAndStatusBarHeight ([UIApplication sharedApplication].statusBarFrame.size.height + 44)
+#define TabBarHeight (iPhoneX ? 83.0 : 49.0)
+#import "Masonry.h"
+#import "UIColor+PGHex.h"
+#import "NSString+QDMethod.h"
+#import "KYEFuncTools.h"
+
+#import <UMCommon/UMCommon.h>
+#import <UMShare/UMShare.h>
+#import <UMCommon/UMCommon.h>
+#import <UMShare/UMShare.h>
+#import "QDShareManager.h"
+#import "UIColor+QDColor.h"
+static NSString* const UMS_Text = @"欢迎使用【友盟+】社会化组件U-Share，SDK包最小，集成成本最低，助力您的产品开发、运营与推广！";
+
+
+#define QDWeakSelf(type)  __weak typeof(type) weak##type = type;
+#define MJWeakSelf __weak typeof(self) weakSelf = self;
+
+
+#endif /* PrefixHeader_pch */
+
+
+
+
+#if 1
+//测试
+#define CommonServeHost @"http://192.168.100.127/mobile/data/query"
+#define CommonServeHostIP @"http://192.168.100.127"
+
+
+#define USHARE_DEMO_APPKEY @"5d2d45083fc195472d000365" //测试 debug
+#define TradeSwitch 1
+#else
+
+//生产
+//#define CommonServeHost @"http://124.156.198.56:8060/mobile/data/query"
+//#define CommonServeHostIP @"http://124.156.198.56:8060"
+
+#define CommonServeHost @"http://mapp.asiapacificex.com/mobile/data/query"
+#define CommonServeHostIP @"http://mapp.asiapacificex.com"
+
+#define USHARE_DEMO_APPKEY @"5d23ed714ca3578b7c000af8"  //生产
+#define TradeSwitch 0
+
+
+#endif
