@@ -29,7 +29,7 @@
     //    menu
     self.backgroundColor = [UIColor colorWithHexString:@"#21212B"];
     _backButt = [UIButton buttonWithType:(UIButtonTypeCustom)];
-    [_backButt setImage:[UIImage imageNamed:@"AppIcon"] forState:(UIControlStateNormal)];
+    [_backButt setImage:[UIImage imageNamed:@"back_light"] forState:(UIControlStateNormal)];
     [_backButt addTarget:self action:@selector(leftClick:) forControlEvents:(UIControlEventTouchUpInside)];
     [self addSubview:_backButt];
     [_backButt addTarget:self action:@selector(leftClick:) forControlEvents:(UIControlEventTouchUpInside)];
@@ -44,20 +44,10 @@
     [self addSubview:_titleLab];
     
     _rightButt = [UIButton buttonWithType:(UIButtonTypeCustom)];
-    [_rightButt setImage:[UIImage imageNamed:@"AppIcon"] forState:(UIControlStateNormal)];
+    [_rightButt setImage:[UIImage imageNamed:@"light_share"] forState:(UIControlStateNormal)];
     [_rightButt addTarget:self action:@selector(rightClick:) forControlEvents:(UIControlEventTouchUpInside)];
     [self addSubview:_rightButt];
     self.rightButtonHidden = YES;
-    
-    self.backgroundColor = [UIColor colorWithHexString:@"21212b"];
-    [self.backButt setImage:[UIImage imageNamed:@"back"] forState:(UIControlStateNormal)];
-    self.titleLab.textColor = [UIColor colorWithHexString:@"#FFFFFF"];
-//    MJWeakSelf
-//    [self setThemeChangeBlock:^{
-//        weakSelf.backgroundColor = [UIColor colorWithHexString:[QDColorTheme shareColorTheme].navigationBackGround];
-//        [weakSelf.backButt setImage:[UIImage imageNamed:[QDColorTheme shareColorTheme].navigationBackImage] forState:(UIControlStateNormal)];
-//        weakSelf.titleLab.textColor = [UIColor colorWithHexString:[QDColorTheme shareColorTheme].mainTextColor];
-//    }];
 }
 
 -(void)setTitle:(NSString *)title{
@@ -83,7 +73,7 @@
     
     [_titleLab mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.mas_equalTo(0);
-//        make.bottom.mas_equalTo(-4);
+        //        make.bottom.mas_equalTo(-4);
         make.centerY.equalTo(_backButt);
     }];
     

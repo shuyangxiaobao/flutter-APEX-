@@ -2,8 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter_app/entrance.dart';
 import 'package:flutter/cupertino.dart';
 import 'me_account.dart';
-
 import 'CommonBottomSheet.dart';
+
+
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'dart:async';
+import 'package:flutter/services.dart';
+import 'dart:io';
+
 
 class APEXMe extends StatefulWidget {
   @override
@@ -12,6 +19,26 @@ class APEXMe extends StatefulWidget {
 
 class _APEXMeState extends State<APEXMe> {
   var _switchValue = false;
+
+ //交互的通道名称，flutter和native是通过这个标识符进行相互间的通信
+  static const communicateChannel =
+      MethodChannel('1234567890');
+
+  //异步执行调用原生方法，保持页面不卡住，因为调用原生的方法可能没实现会抛出异常，所以trycatch包住
+  Future<void> _communicateFunction(flutterPara) async {
+    try {
+      //原生方法名为callNativeMethond,flutterPara为flutter调用原生方法传入的参数，await等待方法执行
+      final result = await communicateChannel.invokeMethod(
+          'callNativeMethond', flutterPara);
+      //如果原生方法执行回调传值给flutter，那下面的代码才会被执行
+    } on PlatformException catch (e) {
+      //抛出异常
+      //flutter: PlatformException(001, 进入异常处理, 进入flutter的trycatch方法的catch方法)
+      print(e);
+    }
+  }
+
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -118,7 +145,7 @@ class _APEXMeState extends State<APEXMe> {
           Container(
             height: 161,
             width: screenWidth,
-            // color: Color(0xff888888),
+            color: Color(0xff21212b),
             child: Stack(
               children: <Widget>[
                 Positioned(
@@ -193,7 +220,24 @@ class _APEXMeState extends State<APEXMe> {
                     'images/me/one_stop.png',
                     fit: BoxFit.cover,
                   ),
-                )
+                ),
+                Positioned(
+                    top: 0,
+                    left: screenWidth / 2,
+                    right: 0,
+                    height: 90,
+                    child: InkWell(
+                      onTap: () {
+                        print('invite friend click');
+                        _communicateFunction('invite');
+                      },
+                      child: Container(
+                        width: screenWidth / 2,
+                        height: 90,
+
+                        // color: Colors.yellow,
+                      ),
+                    ))
               ],
             ),
           ),

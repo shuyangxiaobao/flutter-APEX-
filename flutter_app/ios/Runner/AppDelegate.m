@@ -1,6 +1,7 @@
 #include "AppDelegate.h"
 #include "GeneratedPluginRegistrant.h"
 #import "FirstViewController.h"
+#import "QDNormalWebViewController.h"
 
 
 @implementation AppDelegate
@@ -10,7 +11,7 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     __weak __typeof(self) weakself = self;
     [UMConfigure initWithAppkey:USHARE_DEMO_APPKEY channel:@"App Store"];
     [self setupUSharePlatforms];   // required: setting platforms on demand
-
+    
     FlutterViewController *controller = (FlutterViewController *)self.window.rootViewController;
     
     //通道标识，要和flutter端的保持一致
@@ -20,18 +21,6 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [channel setMethodCallHandler:^(FlutterMethodCall * _Nonnull call, FlutterResult  _Nonnull result) {
         //call的属性method是flutter调用原生方法的方法名，我们进行字符串判断然后写入不同的逻辑
         if ([call.method isEqualToString:@"callNativeMethond"]) {
-            
-            
-            if (1) {
-//                QDShareManager *share = [QDShareManager new];
-//                share.SavePhotoBlock = ^(BOOL isSuccess) {
-//
-//                };
-//                [share shareScreenshot:controller];
-//                return;
-            }
-            
-           
             //flutter传给原生的参数
             id para = call.arguments;
             
@@ -41,7 +30,14 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
                 share.SavePhotoBlock = ^(BOOL isSuccess) {
                 };
                 [share shareWebPage:@"title"  shareDesc:@"baidu" image:[UIImage imageNamed:@"AppIcon"] url:@"www.baidu.com" viewController:controller];
+            } else if ([para isEqualToString:@"invite"]){
+                NSString *fullUrl = [NSString stringWithFormat:@"%@%@",CommonServeHostIP,QD_InviteSubUrl];
+                QDNormalWebViewController *webVC = [[QDNormalWebViewController alloc]initWithUrlString:fullUrl title:@"Invite Friends" shareTitle:@"Download APEX Mobile" shareDesc:@"Welcome to download iOS and Android App"];
+                [controller presentViewController:webVC animated:YES completion:nil];
             }
+            
+            
+            
             
             
             //获取一个字符串
@@ -51,8 +47,8 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
                 //把获取到的字符串传值给flutter
                 result(nativeFinalStr);
                 dispatch_async(dispatch_get_main_queue(), ^{
-//                    FirstViewController *vc = [FirstViewController new];
-//                    [controller presentViewController:vc animated:YES completion:nil];
+                    //                    FirstViewController *vc = [FirstViewController new];
+                    //                    [controller presentViewController:vc animated:YES completion:nil];
                 });
             }else{
                 //异常(比如改方法是调用原生的getString获取一个字符串，但是返回的是nil(空值)，这显然是不对的，就可以向flutter抛出异常 进入catch处理)

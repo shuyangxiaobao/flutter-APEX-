@@ -62,7 +62,7 @@ DEPENDENCIES:
   - video_player (from `.symlinks/plugins/video_player/ios`)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - Masonry
     - MJRefresh
     - UMCCommon
@@ -87,4 +87,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 109d702ea983967829870e1211c2320064aa5c68
 
-COCOAPODS: 1.7.0.beta.3
+COCOAPODS: 1.8.4

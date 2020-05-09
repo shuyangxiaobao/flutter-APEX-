@@ -9,12 +9,9 @@
 /* Begin PBXBuildFile section */
 		1498D2341E8E89220040F4C2 /* GeneratedPluginRegistrant.m in Sources */ = {isa = PBXBuildFile; fileRef = 1498D2331E8E89220040F4C2 /* GeneratedPluginRegistrant.m */; };
 		3B3967161E833CAA004F5970 /* AppFrameworkInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3B3967151E833CAA004F5970 /* AppFrameworkInfo.plist */; };
-		3B80C3941E831B6300D905FE /* App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B80C3931E831B6300D905FE /* App.framework */; };
-		3B80C3951E831B6300D905FE /* App.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3B80C3931E831B6300D905FE /* App.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		82B4BDE823263704000B8D4A /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82B4BDE623263704000B8D4A /* FirstViewController.m */; };
 		82B4BDE923263704000B8D4A /* FirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82B4BDE723263704000B8D4A /* FirstViewController.xib */; };
 		82B4BE06232648CF000B8D4A /* QDShareBottom.m in Sources */ = {isa = PBXBuildFile; fileRef = 82B4BDF2232648CE000B8D4A /* QDShareBottom.m */; };
-		82B4BE08232648CF000B8D4A /* QDCommonTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 82B4BDF4232648CE000B8D4A /* QDCommonTopView.m */; };
 		82B4BE09232648CF000B8D4A /* leftSlideCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82B4BDF5232648CE000B8D4A /* leftSlideCell.xib */; };
 		82B4BE0A232648CF000B8D4A /* leftSlideCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 82B4BDFB232648CF000B8D4A /* leftSlideCell.m */; };
 		82B4BE0C232648CF000B8D4A /* QDShareCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 82B4BE00232648CF000B8D4A /* QDShareCell.m */; };
@@ -26,9 +23,11 @@
 		82B4BE3B23265285000B8D4A /* QDShareManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 82B4BE3923265285000B8D4A /* QDShareManager.m */; };
 		82B4BE3E23265311000B8D4A /* KYEFuncTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 82B4BE3C23265311000B8D4A /* KYEFuncTools.m */; };
 		82B4BE412326551E000B8D4A /* UIColor+QDColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 82B4BE3F2326551E000B8D4A /* UIColor+QDColor.m */; };
+		82CFABCD232786BA00CCB21E /* QDNormalWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82CFABCA232786BA00CCB21E /* QDNormalWebViewController.m */; };
+		82CFABCE232786BA00CCB21E /* QDCommonTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 82CFABCC232786BA00CCB21E /* QDCommonTopView.m */; };
+		82FCC2052454805300E5660D /* App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B80C3931E831B6300D905FE /* App.framework */; };
 		9705A1C61CF904A100538489 /* Flutter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9740EEBA1CF902C7004384FC /* Flutter.framework */; };
 		9705A1C71CF904A300538489 /* Flutter.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9740EEBA1CF902C7004384FC /* Flutter.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		9740EEB41CF90195004384FC /* Debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 9740EEB21CF90195004384FC /* Debug.xcconfig */; };
 		978B8F6F1D3862AE00F588F7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AFFD8EE1D35381100E5BB4D /* AppDelegate.m */; };
 		97C146F31CF9000F007C117D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 97C146F21CF9000F007C117D /* main.m */; };
 		97C146FC1CF9000F007C117D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97C146FA1CF9000F007C117D /* Main.storyboard */; };
@@ -44,7 +43,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				3B80C3951E831B6300D905FE /* App.framework in Embed Frameworks */,
 				9705A1C71CF904A300538489 /* Flutter.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -67,13 +65,11 @@
 		82B4BDE623263704000B8D4A /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
 		82B4BDE723263704000B8D4A /* FirstViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstViewController.xib; sourceTree = "<group>"; };
 		82B4BDF2232648CE000B8D4A /* QDShareBottom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QDShareBottom.m; sourceTree = "<group>"; };
-		82B4BDF4232648CE000B8D4A /* QDCommonTopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QDCommonTopView.m; sourceTree = "<group>"; };
 		82B4BDF5232648CE000B8D4A /* leftSlideCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = leftSlideCell.xib; sourceTree = "<group>"; };
 		82B4BDF6232648CE000B8D4A /* QDShareBottom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QDShareBottom.h; sourceTree = "<group>"; };
 		82B4BDF7232648CE000B8D4A /* leftSlideCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = leftSlideCell.h; sourceTree = "<group>"; };
 		82B4BDFA232648CF000B8D4A /* QDShareCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QDShareCell.h; sourceTree = "<group>"; };
 		82B4BDFB232648CF000B8D4A /* leftSlideCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = leftSlideCell.m; sourceTree = "<group>"; };
-		82B4BDFC232648CF000B8D4A /* QDCommonTopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QDCommonTopView.h; sourceTree = "<group>"; };
 		82B4BDFE232648CF000B8D4A /* QDShareView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QDShareView.h; sourceTree = "<group>"; };
 		82B4BE00232648CF000B8D4A /* QDShareCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QDShareCell.m; sourceTree = "<group>"; };
 		82B4BE01232648CF000B8D4A /* QDShareView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QDShareView.m; sourceTree = "<group>"; };
@@ -91,6 +87,10 @@
 		82B4BE3D23265311000B8D4A /* KYEFuncTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KYEFuncTools.h; sourceTree = "<group>"; };
 		82B4BE3F2326551E000B8D4A /* UIColor+QDColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+QDColor.m"; sourceTree = "<group>"; };
 		82B4BE402326551E000B8D4A /* UIColor+QDColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+QDColor.h"; sourceTree = "<group>"; };
+		82CFABC9232786BA00CCB21E /* QDNormalWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QDNormalWebViewController.h; sourceTree = "<group>"; };
+		82CFABCA232786BA00CCB21E /* QDNormalWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QDNormalWebViewController.m; sourceTree = "<group>"; };
+		82CFABCB232786BA00CCB21E /* QDCommonTopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QDCommonTopView.h; sourceTree = "<group>"; };
+		82CFABCC232786BA00CCB21E /* QDCommonTopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QDCommonTopView.m; sourceTree = "<group>"; };
 		9740EEB21CF90195004384FC /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Debug.xcconfig; path = Flutter/Debug.xcconfig; sourceTree = "<group>"; };
 		9740EEB31CF90195004384FC /* Generated.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Generated.xcconfig; path = Flutter/Generated.xcconfig; sourceTree = "<group>"; };
 		9740EEBA1CF902C7004384FC /* Flutter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Flutter.framework; path = Flutter/Flutter.framework; sourceTree = "<group>"; };
@@ -109,7 +109,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9705A1C61CF904A100538489 /* Flutter.framework in Frameworks */,
-				3B80C3941E831B6300D905FE /* App.framework in Frameworks */,
+				82FCC2052454805300E5660D /* App.framework in Frameworks */,
 				E99A83CF7AABF7094BD96A27 /* libPods-Runner.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -134,8 +134,6 @@
 				82B4BDF7232648CE000B8D4A /* leftSlideCell.h */,
 				82B4BDFB232648CF000B8D4A /* leftSlideCell.m */,
 				82B4BDF5232648CE000B8D4A /* leftSlideCell.xib */,
-				82B4BDFC232648CF000B8D4A /* QDCommonTopView.h */,
-				82B4BDF4232648CE000B8D4A /* QDCommonTopView.m */,
 				82B4BDF6232648CE000B8D4A /* QDShareBottom.h */,
 				82B4BDF2232648CE000B8D4A /* QDShareBottom.m */,
 				82B4BDFA232648CF000B8D4A /* QDShareCell.h */,
@@ -154,6 +152,17 @@
 				82B4BE04232648CF000B8D4A /* XDSDropDownMenu.m */,
 			);
 			path = XDSDropDownMenu;
+			sourceTree = "<group>";
+		};
+		82CFABC82327866B00CCB21E /* Me */ = {
+			isa = PBXGroup;
+			children = (
+				82CFABCB232786BA00CCB21E /* QDCommonTopView.h */,
+				82CFABCC232786BA00CCB21E /* QDCommonTopView.m */,
+				82CFABC9232786BA00CCB21E /* QDNormalWebViewController.h */,
+				82CFABCA232786BA00CCB21E /* QDNormalWebViewController.m */,
+			);
+			path = Me;
 			sourceTree = "<group>";
 		};
 		8928ADCA4752A5703BD031B7 /* Frameworks */ = {
@@ -200,6 +209,7 @@
 		97C146F01CF9000F007C117D /* Runner */ = {
 			isa = PBXGroup;
 			children = (
+				82CFABC82327866B00CCB21E /* Me */,
 				82B4BDF1232648BC000B8D4A /* Tool */,
 				7AFFD8ED1D35381100E5BB4D /* AppDelegate.h */,
 				7AFFD8EE1D35381100E5BB4D /* AppDelegate.m */,
@@ -267,7 +277,7 @@
 		97C146E61CF9000F007C117D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1020;
+				LastUpgradeCheck = 1140;
 				ORGANIZATIONNAME = "The Chromium Authors";
 				TargetAttributes = {
 					97C146ED1CF9000F007C117D = {
@@ -304,7 +314,6 @@
 				82B4BDE923263704000B8D4A /* FirstViewController.xib in Resources */,
 				3B3967161E833CAA004F5970 /* AppFrameworkInfo.plist in Resources */,
 				82B4BE3823264FB8000B8D4A /* QDColorTheme.plist in Resources */,
-				9740EEB41CF90195004384FC /* Debug.xcconfig in Resources */,
 				82B4BE09232648CF000B8D4A /* leftSlideCell.xib in Resources */,
 				97C146FE1CF9000F007C117D /* Assets.xcassets in Resources */,
 				97C146FC1CF9000F007C117D /* Main.storyboard in Resources */,
@@ -402,13 +411,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				82B4BE0D232648CF000B8D4A /* QDShareView.m in Sources */,
+				82CFABCD232786BA00CCB21E /* QDNormalWebViewController.m in Sources */,
 				82B4BE3023264D6E000B8D4A /* UIColor+PGHex.m in Sources */,
 				978B8F6F1D3862AE00F588F7 /* AppDelegate.m in Sources */,
 				97C146F31CF9000F007C117D /* main.m in Sources */,
 				1498D2341E8E89220040F4C2 /* GeneratedPluginRegistrant.m in Sources */,
 				82B4BDE823263704000B8D4A /* FirstViewController.m in Sources */,
 				82B4BE412326551E000B8D4A /* UIColor+QDColor.m in Sources */,
-				82B4BE08232648CF000B8D4A /* QDCommonTopView.m in Sources */,
 				82B4BE3B23265285000B8D4A /* QDShareManager.m in Sources */,
 				82B4BE0A232648CF000B8D4A /* leftSlideCell.m in Sources */,
 				82B4BE0E232648CF000B8D4A /* XDSDropDownMenu.m in Sources */,
@@ -416,6 +425,7 @@
 				82B4BE3E23265311000B8D4A /* KYEFuncTools.m in Sources */,
 				82B4BE06232648CF000B8D4A /* QDShareBottom.m in Sources */,
 				82B4BE3323264DA8000B8D4A /* NSString+QDMethod.m in Sources */,
+				82CFABCE232786BA00CCB21E /* QDCommonTopView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

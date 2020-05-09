@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'dart:ui';
 import 'package:flutter/material.dart';
+
 /// 底部弹出框
 class CommonBottomSheet extends StatefulWidget {
   CommonBottomSheet({Key key, this.list, this.onItemClickListener})
@@ -11,6 +12,7 @@ class CommonBottomSheet extends StatefulWidget {
   @override
   _CommonBottomSheetState createState() => _CommonBottomSheetState();
 }
+
 typedef OnItemClickListener = void Function(int index);
 
 class _CommonBottomSheetState extends State<CommonBottomSheet> {
@@ -24,6 +26,7 @@ class _CommonBottomSheetState extends State<CommonBottomSheet> {
     super.initState();
     onItemClickListener = widget.onItemClickListener;
   }
+
   @override
   Widget build(BuildContext context) {
     Orientation orientation = MediaQuery.of(context).orientation;
@@ -37,7 +40,7 @@ class _CommonBottomSheetState extends State<CommonBottomSheet> {
 
     /// *2-1是为了加分割线，最后还有一个cancel，所以加1
     itemCount = (widget.list.length * 2 - 1) + 1;
-    var height = ((widget.list.length+1) * 48).toDouble();
+    var height = ((widget.list.length + 1) * 48).toDouble();
     var cancelContainer = Container(
         height: itemHeight,
         margin: EdgeInsets.only(left: 10, right: 10),
@@ -50,7 +53,8 @@ class _CommonBottomSheetState extends State<CommonBottomSheet> {
             onTap: () {
               Navigator.pop(context);
             },
-            child: Text("取消",
+            child: Text(
+              "取消",
               style: TextStyle(
                   fontFamily: 'Robot',
                   fontWeight: FontWeight.normal,
@@ -90,8 +94,6 @@ class _CommonBottomSheetState extends State<CommonBottomSheet> {
     return stack;
   }
 
-
-
   Widget getItemContainer(BuildContext context, int index) {
     if (widget.list == null) {
       return Container();
@@ -123,15 +125,24 @@ class _CommonBottomSheetState extends State<CommonBottomSheet> {
       /// 第一个元素
       if (index == 0) {
         isFirst = true;
-        borderRadius = BorderRadius.only(topLeft: Radius.circular(circular), topRight: Radius.circular(circular));
-        margin = EdgeInsets.only(left: 10, right: 10,);
+        borderRadius = BorderRadius.only(
+            topLeft: Radius.circular(circular),
+            topRight: Radius.circular(circular));
+        margin = EdgeInsets.only(
+          left: 10,
+          right: 10,
+        );
         border = Border(top: borderSide, left: borderSide, right: borderSide);
       } else if (index == itemCount - 2) {
         isLast = true;
+
         /// 最后一个元素
-        borderRadius = BorderRadius.only(bottomLeft: Radius.circular(circular), bottomRight: Radius.circular(circular));
-        margin = EdgeInsets.only( left: 10, right: 10);
-        border = Border(bottom: borderSide, left: borderSide, right: borderSide);
+        borderRadius = BorderRadius.only(
+            bottomLeft: Radius.circular(circular),
+            bottomRight: Radius.circular(circular));
+        margin = EdgeInsets.only(left: 10, right: 10);
+        border =
+            Border(bottom: borderSide, left: borderSide, right: borderSide);
       } else {
         /// 其他位置元素
         margin = EdgeInsets.only(left: 10, right: 10);
@@ -181,14 +192,3 @@ class _CommonBottomSheetState extends State<CommonBottomSheet> {
     return getsture;
   }
 }
-
-
-
-
-
-
-
-
-
-
-

@@ -39,6 +39,7 @@
 static NSString* const UMS_Text = @"欢迎使用【友盟+】社会化组件U-Share，SDK包最小，集成成本最低，助力您的产品开发、运营与推广！";
 
 
+
 #define QDWeakSelf(type)  __weak typeof(type) weak##type = type;
 #define MJWeakSelf __weak typeof(self) weakSelf = self;
 
@@ -68,5 +69,10 @@ static NSString* const UMS_Text = @"欢迎使用【友盟+】社会化组件U-Sh
 #define USHARE_DEMO_APPKEY @"5d23ed714ca3578b7c000af8"  //生产
 #define TradeSwitch 0
 
-
 #endif
+
+
+
+
+static NSString * const QD_InviteSubUrl = @"/webapp/#/inviter";
+

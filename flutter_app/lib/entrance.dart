@@ -11,6 +11,9 @@ double screenWidth = 0.0;
 double screenHeight = 0.0;
 double topPadding = 0.0;
 double bottomPadding = 0.0;
+double getAutosize(double size){
+  return screenWidth*size/375.0;
+}
 
 class Entrance extends StatelessWidget {
   @override
@@ -19,6 +22,7 @@ class Entrance extends StatelessWidget {
     screenHeight = MediaQuery.of(context).size.height;
     topPadding = MediaQuery.of(context).padding.top; //状态栏高度  iphoneX:44
     bottomPadding = MediaQuery.of(context).padding.bottom; //底部tabbar高度  iphoneX:34
+
     return Scaffold(
       appBar: AppBar(
         title: Text('day11demo'),
@@ -52,7 +56,7 @@ class Entrance extends StatelessWidget {
             page: ApexEntrance(),
           ),
            ListItem(
-            title: "OC flutter 交互",
+            title: "OC flutter3r",
             page: TwoCommunicate(),
           ),
 

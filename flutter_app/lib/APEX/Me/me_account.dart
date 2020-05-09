@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import 'me_account_position.dart';
 import 'me_account_account.dart';
 // import 'package:flutter_wechat/flutter_wechat.dart';
 
@@ -15,10 +16,8 @@ class _MeAccountState extends State<MeAccount> {
 
   void initData(BuildContext context) {
     _pages = [
-      MeAccoountAccount(),
-      Center(
-        child: Text('22'),
-      ),
+      MeAccoountPosition(),
+      MeAccountAccount(),
     ];
   }
 
@@ -69,7 +68,7 @@ class _MeAccountState extends State<MeAccount> {
                   child: Text('Positions'),
                 ),
                 Center(
-                  child: Text('Account'),
+                  child: Text('Account',),
                 ),
               ],
               onTap: (int index) => {
